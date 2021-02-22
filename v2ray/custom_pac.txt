@@ -1,1 +1,1 @@
-        "||justhost.ru",
+	"||justhost.ru",

@@ -3,6 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 PAC_URL="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+PAC_CUSTOM_URL="http://handupup.top/shell/custom_pac.txt"
 Output_URL="pac.txt"
 prefix_suffix(){
 PAC_TAME="/*
@@ -19,37 +20,13 @@ var nowall_proxy = function(){ return direct; };
 var ip_proxy = function(){ return nowall_proxy(); };
 var ipv6_proxy = function(){ return nowall_proxy(); };
 
-/*
- * Copyright (C) 2014 breakwa11
- * https://github.com/breakwa11/gfw_whitelist
- */
-
-/*
- * Copyright (C) 2017-2018 Toyo
- * https://softs.loan/Other/pac.txt
- */
-
 var rules = [
+'
+PAC_swap_line='
+
 '
 PAC_suffix='
 ];
-
-/*
-* This file is part of Adblock Plus <http://adblockplus.org/>,
-* Copyright (C) 2006-2014 Eyeo GmbH
-*
-* Adblock Plus is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License version 3 as
-* published by the Free Software Foundation.
-*
-* Adblock Plus is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with Adblock Plus.	If not, see <http://www.gnu.org/licenses/>.
-*/
 
 function createDict()
 {
@@ -867,6 +844,7 @@ urlsafe_base64_d(){
 PAC_TEXT=$(curl -m 10 -s "${PAC_URL}")
 PAC_BASE64=$(urlsafe_base64_d "${PAC_TEXT}"|grep -v "!"|sed '1d;s/\\/\\\\/g;/^\s*$/d;s/^/	"&/g;s/$/&",/g;$s/.$//')
 PAC_NUM=$(echo "${PAC_BASE64}"|wc -l)
-echo "${PAC_TAME}${PAC_prefix}${PAC_BASE64}${PAC_suffix}" > "${Output_URL}"
+PAC_CUSTOM=$(curl -m 10 -s "${PAC_CUSTOM_URL}")
+echo "${PAC_TAME}${PAC_prefix}${PAC_CUSTOM}${PAC_swap_line}${PAC_BASE64}${PAC_suffix}" > "${Output_URL}"
 sed -i 's/$/\r/' "${Output_URL}"
 echo "${PAC_NUM}"
