@@ -12,8 +12,8 @@ PAC_TAME="/*
 PAC_prefix='var direct = "__DIRECT__";
 if (direct == "__DIR" + "ECT__") direct = "DIRECT;";
 
-var wall_proxy = function(){ return "__PROXY__"; };
-var wall_v6_proxy = function(){ return "__PROXY__"; };
+var wall_proxy = function(){ return "SOCKS5 127.0.0.1:1080"; };
+var wall_v6_proxy = function(){ return "SOCKS5 127.0.0.1:1080"; };
 
 var nowall_proxy = function(){ return direct; };
 var ip_proxy = function(){ return nowall_proxy(); };
@@ -23,7 +23,7 @@ var ipv6_proxy = function(){ return nowall_proxy(); };
  * Copyright (C) 2014 breakwa11
  * https://github.com/breakwa11/gfw_whitelist
  */
- 
+
 /*
  * Copyright (C) 2017-2018 Toyo
  * https://softs.loan/Other/pac.txt
