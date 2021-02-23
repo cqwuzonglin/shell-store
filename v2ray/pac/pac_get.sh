@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
+
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
-PAC_URL="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
-PAC_CUSTOM_URL="http://handupup.top/shell/custom_pac.txt"
-Output_URL="pac.txt"
 prefix_suffix(){
 PAC_TAME="/*
  * Last Updated:$(date '+%Y-%m-%d %H:%M:%S')
@@ -841,10 +839,20 @@ urlsafe_base64_d(){
 	date=$(echo -n "$1"|sed 's/-/+/g;s/_/\//g'|base64 -d)
 	echo -e "${date}"
 }
-PAC_TEXT=$(curl -m 10 -s "${PAC_URL}")
-PAC_BASE64=$(urlsafe_base64_d "${PAC_TEXT}"|grep -v "!"|sed '1d;s/\\/\\\\/g;/^\s*$/d;s/^/	"&/g;s/$/&",/g;$s/.$//')
+
+PAC_URL="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+OUTPUT_URL="pac.txt"
+CUSTOM_OUTPUT_URL="custom_pac.txt"
+GFWLIST_OUTPUT_URL="gfwlist_pac.txt"
+if [ $# == 1 ]; then
+    PAC_TEXT=$(curl -m 10 -s "${PAC_URL}")
+    PAC_BASE64=$(urlsafe_base64_d "${PAC_TEXT}"|grep -v "!"|sed '1d;s/\\/\\\\/g;/^\s*$/d;s/^/	"&/g;s/$/&",/g;$s/.$//')
+    echo "${PAC_BASE64}" > "${GFWLIST_OUTPUT_URL}"
+else
+    PAC_BASE64=$(cat "${GFWLIST_OUTPUT_URL}")
+fi
 PAC_NUM=$(echo "${PAC_BASE64}"|wc -l)
-PAC_CUSTOM=$(curl -m 10 -s "${PAC_CUSTOM_URL}")
-echo "${PAC_TAME}${PAC_prefix}${PAC_CUSTOM}${PAC_swap_line}${PAC_BASE64}${PAC_suffix}" > "${Output_URL}"
-sed -i 's/$/\r/' "${Output_URL}"
+PAC_CUSTOM=$(cat "${CUSTOM_OUTPUT_URL}")
+echo "${PAC_TAME}${PAC_prefix}${PAC_CUSTOM}${PAC_swap_line}${PAC_BASE64}${PAC_suffix}" > "${OUTPUT_URL}"
+sed -i 's/$/\r/' "${OUTPUT_URL}"
 echo "${PAC_NUM}"
