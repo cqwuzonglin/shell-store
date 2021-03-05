@@ -16,6 +16,7 @@ var rules = [
 	"||github.com",
 	"||bungie.net",
 	"||google-analytics.com",
+	"||theav.xyz",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",
