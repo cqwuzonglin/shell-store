@@ -2,3 +2,4 @@
 	"||github.com",
 	"||bungie.net",
 	"||google-analytics.com",
+	"||theav.xyz",
