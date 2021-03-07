@@ -3,3 +3,4 @@
 	"||bungie.net",
 	"||google-analytics.com",
 	"||theav.xyz",
+	"||jable.tv",
