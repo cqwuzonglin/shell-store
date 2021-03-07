@@ -17,6 +17,7 @@ var rules = [
 	"||bungie.net",
 	"||google-analytics.com",
 	"||theav.xyz",
+	"||jable.tv",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",
