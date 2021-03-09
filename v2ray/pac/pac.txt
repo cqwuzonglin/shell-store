@@ -18,6 +18,8 @@ var rules = [
 	"||google-analytics.com",
 	"||theav.xyz",
 	"||jable.tv",
+         
+	 "||javtiful.com",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",
