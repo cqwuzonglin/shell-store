@@ -1,3 +1,4 @@
+	"||v2fly.org",
 	"||justhost.ru",
 	"||github.com",
 	"||bungie.net",
