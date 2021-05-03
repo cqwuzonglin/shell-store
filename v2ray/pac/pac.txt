@@ -21,6 +21,7 @@ var rules = [
 	"||theav.xyz",
 	"||jable.tv",
     "||buzzav.com",
+    "||bi-si2.xyz",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",

@@ -5,4 +5,5 @@
 	"||google-analytics.com",
 	"||theav.xyz",
 	"||jable.tv",
-	"||buzzav.com",
+    "||buzzav.com",
+    "||bi-si2.xyz",
