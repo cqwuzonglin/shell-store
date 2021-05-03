@@ -12,7 +12,7 @@ var ip_proxy = function(){ return nowall_proxy(); };
 var ipv6_proxy = function(){ return nowall_proxy(); };
 
 var rules = [
-	  
+
 	"||v2fly.org",
 	"||justhost.ru",
 	"||github.com",
@@ -20,6 +20,7 @@ var rules = [
 	"||google-analytics.com",
 	"||theav.xyz",
 	"||jable.tv",
+    "||buzzav.com",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",
