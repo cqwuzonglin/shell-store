@@ -1,0 +1,18 @@
+:1022 {
+　　# 设置/userdisk/data为可以被访问的目录
+　　root * /userdisk/data
+　　encode gzip
+　　# 设置用户名为wzl，密码为$(caddy hash-password --plaintext 123456)（将上面生成的长串密码粘贴到用户名后面）
+　　basicauth {
+　　　　wzl JDJhJDE0JDEzdzNUM2ZZTVpab0pQLmlsNjNpWGVxVGRUVTlIWnlaYVEvbWFrTUlOZlR4dWhKOWh5c2wy
+　　}
+　　route {
+　　　　rewrite /webdav /webdav/
+　　　　webdav /webdav/* {
+　　　　　　# 使用WebDAV访问路径的前缀
+　　　　　　prefix /webdav
+　　　　}
+　　　　# http文件服务，可以在浏览器中查看下载文件
+　　　　file_server browse
+　　}
+}
