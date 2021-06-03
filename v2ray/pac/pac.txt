@@ -22,6 +22,7 @@ var rules = [
 	"||jable.tv",
     "||buzzav.com",
     "||bi-si2.xyz",
+    "||bi-si999.xyz",
     "||tktube.com",
 
 	"|http://85.17.73.31/",
