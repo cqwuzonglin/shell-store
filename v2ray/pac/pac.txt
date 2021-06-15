@@ -23,6 +23,7 @@ var rules = [
     "||buzzav.com",
     "||bi-si999.xyz",
     "||tktube.com",
+    "||contabo.com",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",
