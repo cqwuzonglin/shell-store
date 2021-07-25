@@ -1,0 +1,15 @@
+  - DOMAIN-SUFFIX,v2fly.org,test-auto
+  - DOMAIN-SUFFIX,justhost.ru,test-auto
+  - DOMAIN-SUFFIX,github.com,test-auto
+  - DOMAIN-SUFFIX,bungie.net,test-auto
+  - DOMAIN-SUFFIX,google-analytics.com,test-auto
+  - DOMAIN-SUFFIX,theav.xyz,test-auto
+  - DOMAIN-SUFFIX,jable.tv,test-auto
+  - DOMAIN-SUFFIX,buzzav.com,test-auto
+  - DOMAIN-SUFFIX,bi-si999.xyz,test-auto
+  - DOMAIN-SUFFIX,tktube.com,test-auto
+  - DOMAIN-SUFFIX,contabo.com,test-auto
+  - DOMAIN-SUFFIX,helloavgirls.com,test-auto
+  - DOMAIN-SUFFIX,vjav.com,test-auto
+  - DOMAIN-SUFFIX,youav.com,test-auto
+  - DOMAIN-SUFFIX,99e15.xyz,test-auto
