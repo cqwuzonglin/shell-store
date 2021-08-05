@@ -28,6 +28,7 @@ var rules = [
 	"||vjav.com",
 	"||youav.com",
 	"||99e15.xyz",
+	"||tiktok.com",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",

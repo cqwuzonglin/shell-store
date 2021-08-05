@@ -54,6 +54,7 @@ rules:
   - DOMAIN-SUFFIX,youav.com,test-auto
   - DOMAIN-SUFFIX,99e15.xyz,test-auto
   - DOMAIN-SUFFIX,youtube.com,test-auto
+  - DOMAIN-SUFFIX,tiktok.com,test-auto
   
   
   

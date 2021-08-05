@@ -13,4 +13,5 @@
 	"||vjav.com",
 	"||youav.com",
 	"||99e15.xyz",
+	"||tiktok.com",
 
