@@ -1,3 +1,4 @@
+##sed -i 's/\r//g' aa.file
 #github文件访问方式
 raw.githubusercontent.com  资源服务器
 

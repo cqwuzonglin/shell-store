@@ -11,8 +11,8 @@ PAC_TAME="/*
 PAC_prefix='var direct = "__DIRECT__";
 if (direct == "__DIR" + "ECT__") direct = "DIRECT;";
 
-var wall_proxy = function(){ return "SOCKS5 127.0.0.1:1080"; };
-var wall_v6_proxy = function(){ return "SOCKS5 127.0.0.1:1080"; };
+var wall_proxy = function(){ return "PROXY 127.0.0.1:1081"; };
+var wall_v6_proxy = function(){ return "PROXY 127.0.0.1:1081"; };
 
 var nowall_proxy = function(){ return direct; };
 var ip_proxy = function(){ return nowall_proxy(); };

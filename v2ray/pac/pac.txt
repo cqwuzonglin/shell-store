@@ -1,5 +1,5 @@
 /*
- * Last Updated:2021-02-23 09:41:35
+ * Last Updated:2021-09-03 22:52:18
  */
 var direct = "__DIRECT__";
 if (direct == "__DIR" + "ECT__") direct = "DIRECT;";
@@ -12,7 +12,6 @@ var ip_proxy = function(){ return nowall_proxy(); };
 var ipv6_proxy = function(){ return nowall_proxy(); };
 
 var rules = [
-
 	"||v2fly.org",
 	"||justhost.ru",
 	"||github.com",
