@@ -18,20 +18,22 @@ if [ -n "$IP_ADDR" ] && [ "$ip" != "$IP_ADDR" ] ; then
 
   iptables-save
 
+  uptime=$(expr `date +%s` - `cut -f1 -d. /proc/uptime`)
+  runtime=$(cat /userdisk/runtime)
+  echo "uptime:$uptime runtime:$runtime"
+  if [ "$runtime" -gt "$uptime" ]; then
+    echo 'not first run'
+  else
+    echo 'first run'
+    date "+%s" > /userdisk/runtime
+    cd /userdisk/nps
+     nohup ./npc &
+    cd /userdisk/webdav/
+    ./caddy start
+  fi
+
 else
   echo 'not run'
 fi
 
-uptime=$(expr `date +%s` - `cut -f1 -d. /proc/uptime`)
-runtime=$(cat /userdisk/runtime)
-echo "uptime:$uptime runtime:$runtime"
-if [ "$runtime" -gt "$uptime" ]; then
-  echo 'not first run'
-else
-  echo 'first run'
-  date "+%s" > /userdisk/runtime
-  cd /userdisk/nps
-   nohup ./npc &
-  cd /userdisk/webdav/
-  ./caddy start
-fi
+
