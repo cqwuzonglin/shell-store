@@ -1,0 +1,21 @@
+*/3 * * * * /usr/sbin/ntpsetclock rand once >/dev/null 2>&1
+##5 2 * * * /usr/sbin/crontab_record_camera.lua
+* * * * * /usr/sbin/startscene_crontab.lua `/bin/date "+%u %H:%M"`
+0 12 * * * /usr/sbin/recordscene_crontab.lua
+45 23 * * * /usr/sbin/points_sysset_pro.lua >/dev/null 2>&1
+0 20 * * * /usr/bin/stat_lan
+0 18 * * 1 /sbin/hdd_stat.sh sda
+0 10 * * * /usr/sbin/regularScanDiskDir.sh
+0 10 * * 1 /usr/sbin/datacenterClient -h localhost -p 9090 -i "{\"api\": 636, \"push\": true}" >/dev/null 2>&1
+0 10 * * 6 /usr/sbin/datacenterClient -h localhost -p 9090 -i "{\"api\": 104, \"push\": true}" >/dev/null 2>&1
+0 5 * * 3 /etc/init.d/web_filter_record restart >/dev/null 2>&1
+0 3 * * * /etc/init.d/sysapihttpd restart >/dev/null 2>&1
+## 5 3 * * * /usr/sbin/reset_svc.sh "etm" "20" "/etc/init.d/xunlei restart"
+## 14 3,4,5 * * * /usr/sbin/otapredownload >/dev/null 2>&1
+* * * * * /userdisk/ddns/meibu_ddns.sh >/dev/null 2>&1
+* * * * * /userdisk/shells/runOnce.sh >/dev/null 2>&1
+* * * * * /userdisk/shells/netcheck.sh >/dev/null 2>&1
+* * * * * /userdisk/nps/runNpc.sh >/dev/null 2>&1
+* * * * * /userdisk/webdav/runCaddy.sh >/dev/null 2>&1
+41 17 * * * /usr/sbin/quarkd >/dev/null 2>&1
+0 */1 * * * /usr/sbin/qactive.sh >/dev/null 2>&1
