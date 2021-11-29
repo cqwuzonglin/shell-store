@@ -29,7 +29,7 @@ else
   echo $ip >$iptxt
 
   # 更新动态域名IP地址，xxxxxx.noip.cn为申请的域名，“pwd=”后面为密码
-  url="http://main.meibu.com/ip/login.asp?name=wzlrouter.noip.cn&pwd=252124779&ipv=${ip}"
+  url="http://main.meibu.com/ip/login.asp?name=wzlrouter.noip.cn&pwd=252124779&ips=0"
   re=$(curl -s $url)
   echo "[ddns] 更新域名成功！"
 fi
