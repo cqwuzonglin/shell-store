@@ -8,7 +8,8 @@ dir=$(
 iptxt="$dir""/ip.txt"
 
 # 获取IPv4地址
-ip=$(ip -4 addr show dev pppoe-wan | grep 'scope global' | grep -v deprecated | awk -F '/|inet ' 'NR==1{print $2;}' | awk -F '/|peer ' 'NR==1{print $1;}' 2>&1)
+# ip=$(ip -4 addr show dev pppoe-wan | grep 'scope global' | grep -v deprecated | awk -F '/|inet ' 'NR==1{print $2;}' | awk -F '/|peer ' 'NR==1{print $1;}' 2>&1)
+ip=$(curl -s http://www.meibu.com/ips.asp)
 if [ "${ip:-none}" == "none" ] ; then
   echo "[ddns] 获取IP错误！"
   exit 12
