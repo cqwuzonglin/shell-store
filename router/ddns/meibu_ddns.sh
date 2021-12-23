@@ -17,7 +17,7 @@ fi
 domain="wzlrouter.noip.cn"
 pingIp=$(ping $domain -c 1 | awk 'NR==2 {print $4}' | sed -n 's/\([0-9\.]*\):/\1/p')
 # 与ip.txt中的IP地址对比，如果一致，则退出；如果不一致，则将新IP写入ip.txt文件中，并提交动态域名更新。
-if [ $ip = $oldip ] && [ $ip = $pingIp ] ; then
+if [ "$ip" = "$oldip" ] && [ "$ip" = "$pingIp" ] ; then
   echo "[ddns] IP无变化！"
 else
   # 将变化的ip地址写入ip.txt
