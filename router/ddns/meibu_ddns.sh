@@ -14,7 +14,7 @@ if [ -f $iptxt ] ; then
 else
   oldip="::"
 fi
-domain="wzlrouter.noip.cn"
+domain="wzlrouter.f3322.net"
 pingIp=$(ping $domain -c 1 | awk 'NR==2 {print $4}' | sed -n 's/\([0-9\.]*\):/\1/p')
 # 与ip.txt中的IP地址对比，如果一致，则退出；如果不一致，则将新IP写入ip.txt文件中，并提交动态域名更新。
 if [ "$ip" = "$oldip" ] && [ "$ip" = "$pingIp" ] ; then
@@ -25,7 +25,7 @@ else
   echo $ip >$iptxt
 
   # 更新动态域名IP地址，xxxxxx.noip.cn为申请的域名，“pwd=”后面为密码
-  url="http://main.meibu.com/ip/login.asp?name=${domain}&pwd=252124779"
-  re=$(curl -s $url)
+  url="http://members.3322.net/dyndns/update?system=dyndns&hostname=${domain}"
+  re=$(curl -s -u wzlrouter:9D6At7YxyxtK3 $url)
   echo "[${ip}] ${re}！"
 fi
