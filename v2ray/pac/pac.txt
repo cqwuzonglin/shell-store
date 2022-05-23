@@ -29,6 +29,7 @@ var rules = [
 	"||99e15.xyz",
 	"||tiktok.com",
 	"||mangguo-youku.com",
+	"||avple.tv",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",
