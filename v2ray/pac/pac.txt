@@ -30,6 +30,7 @@ var rules = [
 	"||tiktok.com",
 	"||mangguo-youku.com",
 	"||avple.tv",
+	"||www.timo66.com",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",
