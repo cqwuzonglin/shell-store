@@ -12,7 +12,7 @@ var ip_proxy = function(){ return nowall_proxy(); };
 var ipv6_proxy = function(){ return nowall_proxy(); };
 
 var rules = [
-	"||v2fly.org",
+		"||v2fly.org",
 	"||justhost.ru",
 	"||github.com",
 	"||bungie.net",
@@ -28,6 +28,9 @@ var rules = [
 	"||youav.com",
 	"||99e15.xyz",
 	"||tiktok.com",
+	"||mangguo-youku.com",
+	"||avple.tv",
+	"||www.timo66.com",
 
 	"|http://85.17.73.31/",
 	"||agnesb.fr",
