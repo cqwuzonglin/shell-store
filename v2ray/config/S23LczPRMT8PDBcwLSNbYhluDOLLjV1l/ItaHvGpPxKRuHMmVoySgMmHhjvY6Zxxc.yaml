@@ -1,7 +1,7 @@
 port: 7890
 socks-port: 7891
 allow-lan: false
-mode: Rule
+mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 experimental:
@@ -9,38 +9,29 @@ experimental:
 hosts:
   mtalk.google.com: 108.177.125.188
 proxies:
-  - name: v2ray-kjcujwejh.tk
+  - name: dqqjsdxcio.tk
     type: vmess
-    server: kjcujwejh.tk
+    server: dqqjsdxcio.tk
     port: 443
-    uuid: e976b424-c365-47c9-bb77-9f5519772e6f
-    alterId: "0"
+    uuid: 12b07f23-c93a-4a33-86cc-d39b9cd0c8d0
+    alterId: 0
     cipher: auto
     tls: true
-    network: ws
-    ws-path: /paihangbang
-  - name: v2ray-adfjhhfhxe.tk
-    type: vmess
-    server: adfjhhfhxe.tk
-    port: 443
-    uuid: d2196c76-dd2b-4607-85a4-bb8698dbc5a0
-    alterId: "0"
-    cipher: auto
-    tls: true
-    network: ws
-    ws-path: /paihangbang
+    network: h2
+    h2-opts:
+      host:
+        - dqqjsdxcio.tk
+      path: /vod
 proxy-groups:
   - name: test-auto
     proxies:
-      - v2ray-kjcujwejh.tk
-      - v2ray-adfjhhfhxe.tk
+      - dqqjsdxcio.tk
     type: url-test
     url: https://www.google.com/ncr
     interval: 300
   - name: select-proxy
     proxies:
-      - v2ray-kjcujwejh.tk
-      - v2ray-adfjhhfhxe.tk
+      - dqqjsdxcio.tk
     type: select
 rules:
   - DOMAIN-SUFFIX,v2fly.org,test-auto,select-proxy
