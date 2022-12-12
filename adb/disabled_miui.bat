@@ -4,6 +4,7 @@ for %%X in (
   "com.android.midrive"
   "com.android.printspooler"
   "com.android.htmlviewer"
+  "com.android.thememanager"
   "com.bsp.catchlog"
   "com.miui.aod"
   "com.miui.miwallpaper"
@@ -45,3 +46,4 @@ for %%X in (
   @ECHO adb shell pm disable-user %%X
   adb shell pm disable-user %%X
 )
+pause
