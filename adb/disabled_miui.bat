@@ -1,3 +1,5 @@
+adb debices
+
 for %%X in (
   "com.android.bips"
   "com.android.browser"
