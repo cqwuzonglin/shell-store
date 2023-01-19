@@ -52,6 +52,8 @@ var rules = [
 	
 	"||missav.com",
 	
+	"||rou.video",
+	
 	
 	"||www.thesprucepets.com",
 
