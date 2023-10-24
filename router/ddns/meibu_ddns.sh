@@ -27,5 +27,9 @@ else
   # 更新动态域名IP地址，xxxxxx.noip.cn为申请的域名，“pwd=”后面为密码
   url="http://members.3322.net/dyndns/update?system=dyndns&hostname=${domain}"
   re=$(curl -s -u wzlrouter:9D6At7YxyxtK3 $url)
-  echo "[${ip}] ${re}！"
+  echo "[${ip} ${domain}] ${re}！"
+  domain="ducktang"
+  url="https://www.duckdns.org/update?domains=${domain}&token=cdb1c075-6570-482e-bd93-9d0829e0a2de&ip="
+  re=$(curl -s $url)
+  echo "[${ip} ${domain}] ${re}！"
 fi
