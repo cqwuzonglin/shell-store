@@ -14,7 +14,7 @@ if [ -f $iptxt ] ; then
 else
   oldip="::"
 fi
-domain="wzlrouter.f3322.net"
+domain="wzlrouter.x3322.net"
 pingIp=$(ping $domain -c 1 | awk 'NR==2 {print $4}' | sed -n 's/\([0-9\.]*\):/\1/p')
 # 与ip.txt中的IP地址对比，如果一致，则退出；如果不一致，则将新IP写入ip.txt文件中，并提交动态域名更新。
 if [ "$ip" = "$oldip" ] && [ "$ip" = "$pingIp" ] ; then
