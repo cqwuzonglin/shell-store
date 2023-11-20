@@ -42,6 +42,13 @@ for %%X in (
   "com.xiaomi.mirror"
   "com.xiaomi.mircs"
   "com.milink.service"
+  "com.xiaomi.aiasst.vision"
+  "com.xiaomi.carlink"
+  "com.android.wallpaperpicker"
+  "com.android.musicfx"
+  "com.android.provision"
+  "com.android.wallpaper.livepicker"
+  "com.miui.wallpaper.overlay.customize"
   "com.google.android.marvin.talkback"
   "com.google.android.ext.services"
 ) do (
