@@ -43,7 +43,7 @@ for %%X in (
   "com.xiaomi.mircs"
   "com.milink.service"
   "com.xiaomi.aiasst.vision"
-  "com.xiaomi.carlink"
+  "com.miui.carlink"
   "com.android.wallpaperpicker"
   "com.android.musicfx"
   "com.android.provision"
