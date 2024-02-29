@@ -7,7 +7,7 @@ var file = require("./file.js");
 var pac = require("./pac.js");
 
 var OUTPUT_PATH = 'dist/'; //输出路径
-var PROXY_TYPE = ["SOCKS5"]; //代理方式列表
+var PROXY_TYPE = ["HTTP"]; //代理方式列表
 
 /*
  * 生成一组PAC
