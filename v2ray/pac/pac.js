@@ -91,19 +91,11 @@ var pac = function(host_list, net_list, proxy) {
         }
     }
 
-    pac._script = TEMPLATE
+    return pac._script = TEMPLATE
         .replace('__FULL_LIST__', whiteHost(full_host))
         .replace('__REG_LIST__', JSON.stringify(reg_host, null, 4))
         .replace('__DOMAIN_LIST__', JSON.stringify(domain_host, null, 4))
         .replace('__IS_NET__', inNet(net_list));
-    if (proxy) {
-        pac.setProxy(proxy);
-    }
-};
-
-pac.setProxy = function(proxy) {
-    proxy = proxy ? proxy.replace("HTTP ", "PROXY ") : "PROXY __proxy__";
-    return pac._script.replace('__PROXY__', proxy);
 };
 
 exports = module.exports = pac;

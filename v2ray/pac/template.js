@@ -40,5 +40,5 @@ function FindProxyForURL(url, host) {
     ) {/*Intranet IP*/
         return "DIRECT";
     }
-    return "__PROXY__";
+    return "SOCKS5 127.0.0.1:1080;";
 };
