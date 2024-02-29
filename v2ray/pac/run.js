@@ -13,6 +13,9 @@ var PROXY_TYPE = ["SOCKS5"]; //代理方式列表
  * 生成一组PAC
  */
 function generate(name) {
+    if ('dist' === name) {
+        return
+    }
     var hosts = file.readLines(name + '/direct-list.txt');
     var nets = file.readLines(name + '/net.txt');
     pac(hosts, nets);
