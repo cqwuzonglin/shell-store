@@ -9,7 +9,7 @@ var FullListHost = __FULL_LIST__ || {};
 var RegExpList = [];
 function DomainLike(host) {
     for (let i = 0; i < DomainListHost.length; i++) {
-        if (DomainListHost[i].indexOf(host) > -1){
+        if (host.indexOf(DomainListHost[i]) > -1){
             return true;
         }
     }
@@ -32,7 +32,7 @@ function FindProxyForURL(url, host) {
     if (host.indexOf(".") < 0
         || FullListHost[host]
         || DomainLike(host)
-        || DomainLike(host)
+        || RegExpTest(host)
     ) {/*Plain Host Name or in whitelist*/
         return "DIRECT";
     } else if (/^(\d{1,3}\.){3}\d{1,3}$/.test(host)

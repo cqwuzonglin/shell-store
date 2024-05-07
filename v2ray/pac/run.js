@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-
+// 下载直连列表到 direct-list.txt 然后运行
+// https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/direct-list.txt
 "use strict";
 //配置读取和自动生成代理配置PAC
 
