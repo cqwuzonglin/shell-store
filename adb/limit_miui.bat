@@ -1,0 +1,61 @@
+adb debices
+
+for %%X in (
+  "com.android.bips"
+  "com.android.browser"
+  "com.android.midrive"
+  "com.android.printspooler"
+  "com.android.htmlviewer"
+  "com.android.thememanager"
+  "com.bsp.catchlog"
+  "com.miui.aod"
+  "com.miui.miwallpaper"
+  "com.miui.contentextension"
+  "com.miui.miservice"
+  "com.miui.hybrid"
+  "com.miui.hybrid.accessory"
+  "com.miui.yellowpage"
+  "com.miui.fmservice"
+  "com.miui.mishare.connectivity"
+  "com.miui.nextpay"
+  "com.miui.touchassistant"
+  "com.miui.player"
+  "com.miui.bugreport"
+  "com.miui.personalassistant"
+  "com.miui.analytics"
+  "com.miui.translation.kingsoft"
+  "com.miui.translation.xmcloud"
+  "com.miui.translation.youdao"
+  "com.miui.translationservice"
+  "com.miui.vsimcore"
+  "com.miui.phrase"
+  "com.miui.misound"
+  "com.miui.accessibility"
+  "com.miui.vipservice"
+  "com.miui.video"
+  "com.xiaomi.ab"
+  "com.xiaomi.payment"
+  "com.xiaomi.mi_connect_service"
+  "com.xiaomi.gamecenter.sdk.service"
+  "com.xiaomi.migameservice"
+  "com.xiaomi.joyose"
+  "com.xiaomi.mirror"
+  "com.xiaomi.mircs"
+  "com.milink.service"
+  "com.xiaomi.aiasst.vision"
+  "com.miui.carlink"
+  "com.android.wallpaperpicker"
+  "com.android.musicfx"
+  "com.android.provision"
+  "com.android.wallpaper.livepicker"
+  "com.miui.wallpaper.overlay.customize"
+  "com.google.android.marvin.talkback"
+  "com.google.android.ext.services"
+) do (
+  @ECHO limit %%X
+  adb shell cmd appops set %%X RUN_IN_BACKGROUND deny
+  adb shell dumpsys deviceidle whitelist -%%X
+  adb shell cmd power put-into-battery-saver %%X true
+  adb shell am set-standby-bucket %%X restricted
+)
+pause
