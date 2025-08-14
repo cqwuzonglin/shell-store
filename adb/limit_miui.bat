@@ -1,4 +1,4 @@
-adb debices
+adb devices
 
 for %%X in (
   "com.android.bips"
