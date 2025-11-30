@@ -82,11 +82,15 @@ for %%X in (
  "com.xiaomi.aireco"
 ) do (
   @ECHO limit %%X
-  adb shell am force-stop %%X
-  adb shell appops appops set %%X RUN_IN_BACKGROUND deny
+
+  adb shell appops set %%X RUN_IN_BACKGROUND deny
+  adb shell appops set %%X START_FOREGROUND deny
   adb shell dumpsys deviceidle whitelist -%%X
+  adb shell cmd netpolicy set restrict-background %%X true
+  adb shell appops set %%X POST_NOTIFICATION deny
   adb shell cmd power put-into-battery-saver %%X true
   adb shell cmd package set-importance %%X 0
   adb shell am set-standby-bucket %%X deep
+  adb shell am force-stop %%X
 )
 pause
