@@ -23,21 +23,8 @@ for %%X in (
  "com.android.printspooler"
  "com.android.bips"
  "com.android.browser"
- "com.miui.screenrecorder"
- "com.miui.soundrecorder"
- "com.miui.gallery"
- "com.miui.mediaeditor"
- "com.miui.mediaviewer"
- "com.android.providers.downloads.ui"
- "com.android.providers.downloads"
- "com.android.soundrecorder"
  "com.milink.service"
- "com.xiaomi.mi_connect_service"
- "com.android.camera"
  "com.xiaomi.ab"
- "com.miui.touchassistant"
- "com.miui.accessibility"
- "com.xiaomi.aiasst.vision"
 ) do (
   @ECHO stop %%X
 
